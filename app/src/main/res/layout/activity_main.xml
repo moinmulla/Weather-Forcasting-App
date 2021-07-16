@@ -33,6 +33,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card1"
+            android:backgroundTint="#faff91"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
@@ -61,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/city"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/germany" />
+                    android:src="@drawable/arch" />
 
             </RelativeLayout>
 
@@ -72,6 +73,7 @@
             android:id="@+id/card2"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:backgroundTint="#9aff96"
             android:layout_centerHorizontal="true"
             android:layout_margin="15dp"
             android:layout_weight="1"
@@ -89,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/code"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/arch" />
+                    android:src="@drawable/germany" />
 
                 <TextView
                     android:id="@+id/code"
@@ -112,7 +114,7 @@
         android:layout_below="@+id/lay"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="More"
+        android:text="AccuWeather"
         android:textAllCaps="false"
         android:textColor="#995008" />
 

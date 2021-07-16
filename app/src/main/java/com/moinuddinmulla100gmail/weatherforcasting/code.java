@@ -61,7 +61,7 @@ public class code extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
 
-                    //Log.d("response",response);
+                    Log.d("response",response);
                     String output = "";
                     try {
                         JSONObject jsonresponse = new JSONObject(response);
@@ -80,8 +80,6 @@ public class code extends AppCompatActivity {
                         String region = jsonresponse.getString("name");
                         JSONObject cloudj = jsonresponse.getJSONObject("clouds");
                         int cloud = cloudj.getInt("all");
-                        JSONObject rainj = jsonresponse.getJSONObject("rain");
-                        double rain = rainj.getDouble("1h");
 
                         output = "Current weather of " + region + "-" + txtcode.getText().toString() + " (" + country + ")\n" +
                                 "Tempreature: " + df.format(temp) + "°C" +
@@ -90,8 +88,7 @@ public class code extends AppCompatActivity {
                                 "\nPressure: " + press + "hPa" +
                                 "\nHumidity: " + humidity + "%" +
                                 "\nSpeed of wind: " + speed + " m/s" +
-                                "\nCloudiness: " + cloud + "%" +
-                                "\nRain: " + df.format(rain) + "mm (for last 1 hour ,mm)";
+                                "\nCloudiness: " + cloud + "%" ;
                         detailscode.setText(output);
                     } catch (JSONException e) {
                         e.printStackTrace();
